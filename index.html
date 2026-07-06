@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xolvon Project Incubator Program</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            dark: '#0B0F19',
+                            slateDark: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-brand-dark text-slate-100 bg-grid-pattern">
+
+    <div class="relative min-h-screen flex flex-col overflow-hidden">
+
+    <!-- Decorative Ambient Blobs (contained, no extra scroll) -->
+    <div class="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-brand-600/10 blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-[30%] right-[-10%] w-[600px] h-[600px] rounded-full bg-cyan-500/10 blur-[150px] pointer-events-none"></div>
+    <div class="absolute bottom-[-20%] left-[10%] w-[500px] h-[500px] rounded-full bg-indigo-500/10 blur-[120px] pointer-events-none"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-cyan-400 text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">X</div>
+                    <span class="font-extrabold text-2xl tracking-tight text-white group-hover:text-cyan-400 transition-colors">Xolvon</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</a>
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
+                    <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
+                    <a href="#contact" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xs font-semibold text-white rounded-xl group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-800 mt-2">
+                        <span class="relative px-4 py-2 transition-all ease-in duration-75 bg-gray-900 rounded-xl group-hover:bg-opacity-0">
+                            Daftar Sekarang
+                        </span>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/50 focus:outline-none" aria-label="Toggle menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-950/95 border-b border-slate-800/80 backdrop-blur-lg">
+            <div class="px-4 py-5 space-y-2">
+                <a href="#home" class="block px-4 py-2.5 text-slate-300 font-medium rounded-xl hover:bg-slate-800/50 hover:text-white transition-all">Home</a>
+                <a href="#about" class="block px-4 py-2.5 text-slate-300 font-medium rounded-xl hover:bg-slate-800/50 hover:text-white transition-all">About</a>
+                <a href="#contact" class="block px-4 py-2.5 text-slate-300 font-medium rounded-xl hover:bg-slate-800/50 hover:text-white transition-all">Contact</a>
+                <a href="#contact" class="block px-4 py-3 mt-3 text-center bg-gradient-to-r from-brand-600 to-cyan-500 text-white rounded-xl font-bold hover:opacity-90 transition-all">Daftar Sekarang</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-1">
+    <!-- Hero -->
+    <section id="home" class="relative pt-40 pb-28 md:pt-48 md:pb-36 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+            
+            <!-- Glowing Hero Badge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-300 text-xs font-semibold tracking-wide mb-8 animate-pulse shadow-inner">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-cyan-400"></i>
+                Pendaftaran Batch 1 Telah Dibuka
+            </div>
+
+            <!-- Big Main Heading -->
+            <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-[1.05]">
+                Pendaftaran Xolvon Project<br>
+                <span class="text-gradient-brand">Incubator Program</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Tantangan inkubasi intensif selama 48 jam khusus Web Developer. Bangun landing page responsif terbaik Anda, deploy ke Vercel/Netlify, dan tunjukkan keahlian Anda.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-5 w-full sm:w-auto">
+                <a href="#contact" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-cyan-500 text-white font-bold text-base hover:opacity-95 transition-all shadow-lg shadow-brand-500/20 transform hover:-translate-y-0.5 text-center">
+                    Kirim Tugas Sekarang
+                </a>
+                <a href="#about" class="px-8 py-4 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-300 font-bold text-base hover:bg-slate-800/80 hover:text-white transition-all transform hover:-translate-y-0.5 text-center backdrop-blur-sm">
+                    Syarat &amp; Ketentuan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Bento Grid) -->
+    <section id="about" class="py-28 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="font-display text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-5">
+                    Informasi &amp; Persyaratan Tugas
+                </h2>
+                <p class="text-lg text-slate-400">
+                    Tunjukkan penguasaan arsitektur, clean-code, dan estetika layout modern melalui tantangan ini.
+                </p>
+            </div>
+
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Bento Card 1: Khusus Web Developer (2 cols wide) -->
+                <div class="glass-card glow-border rounded-3xl p-8 md:p-10 md:col-span-2 flex flex-col justify-between overflow-hidden relative group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full blur-2xl group-hover:bg-brand-500/20 transition-all"></div>
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center mb-6">
+                            <i data-lucide="code-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-white mb-4">Pengembangan Landing Page</h3>
+                        <p class="text-slate-400 text-base leading-relaxed mb-6">
+                            Tantangan ini menuntut Anda menerjemahkan konsep struktur web secara profesional. Bangun landing page terstruktur dengan komponen minimal: **Hero**, **About**, dan **Contact**.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mt-4">
+                        <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300">Responsive Layout</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300">Modern Semantics</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300">CSS Frameworks</span>
+                    </div>
+                </div>
+
+                <!-- Bento Card 2: Batas Waktu 48 Jam (1 col) -->
+                <div class="glass-card glow-border rounded-3xl p-8 flex flex-col justify-between relative group">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-6">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-white mb-3">Batas Waktu Pengumpulan</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Proyek harus diselesaikan dan dikirim dalam tenggat waktu ketat.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <div class="text-5xl font-extrabold text-amber-400 tracking-tight font-display animate-pulse">48 JAM</div>
+                        <div class="text-xs text-slate-500 mt-2 font-medium">Sejak pendaftaran dikonfirmasi</div>
+                    </div>
+                </div>
+
+                <!-- Bento Card 3: Cloud Deployment (1 col) -->
+                <div class="glass-card glow-border rounded-3xl p-8 flex flex-col justify-between relative group">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-6">
+                            <i data-lucide="cloud-lightning" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-white mb-3">Deployment Cloud</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Deploy hasil karya Anda ke platform cloud agar dapat diuji secara langsung oleh tim penguji.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-8 text-slate-400">
+                        <span class="flex items-center gap-1.5 text-xs bg-slate-900 px-2.5 py-1.5 rounded-lg border border-slate-800">
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Vercel
+                        </span>
+                        <span class="flex items-center gap-1.5 text-xs bg-slate-900 px-2.5 py-1.5 rounded-lg border border-slate-800">
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Netlify
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Bento Card 4: Recommended Tech Stack (2 cols wide) -->
+                <div class="glass-card glow-border rounded-3xl p-8 md:p-10 md:col-span-2 flex flex-col justify-between relative group">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-6">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-white mb-4">Teknologi Rekomendasi</h3>
+                        <p class="text-slate-400 text-base leading-relaxed mb-6">
+                            Anda bebas menggunakan stack andalan Anda. Untuk hasil terbaik, kami menyarankan penggunaan framework modern untuk membuktikan pemahaman modularisasi kode Anda:
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-2">
+                        <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
+                            <div class="w-2.5 h-2.5 rounded-full bg-cyan-400"></div>
+                            <span class="text-xs font-semibold text-slate-300">React / Next.js</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
+                            <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
+                            <span class="text-xs font-semibold text-slate-300">Vue.js 3</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
+                            <div class="w-2.5 h-2.5 rounded-full bg-indigo-400"></div>
+                            <span class="text-xs font-semibold text-slate-300">Laravel (Inertia)</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
+                            <div class="w-2.5 h-2.5 rounded-full bg-sky-400"></div>
+                            <span class="text-xs font-semibold text-slate-300">Tailwind CSS</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
+                            <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                            <span class="text-xs font-semibold text-slate-300">RESTful API integration</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
+                            <div class="w-2.5 h-2.5 rounded-full bg-blue-400"></div>
+                            <span class="text-xs font-semibold text-slate-300">Docker (Optional)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Card 5: Case Study / Inspiration (3 cols wide on mobile, full width on desktop) -->
+                <div class="glass-card glow-border rounded-3xl p-8 md:p-10 md:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 overflow-hidden relative group">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="max-w-2xl">
+                        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+                            <i data-lucide="award" class="w-3.5 h-3.5"></i>
+                            Studi Kasus Proyek Unggulan
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-white mb-4">Inspirasi Karya: TitikAman</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Contoh proyek pemenang IT Bootcamp Software Development 2026. Mengembangkan peta evakuasi banjir real-time menggunakan **Laravel, WebSocket (Laravel Reverb), Leaflet.js**, dan verifikasi kehandalan kode melalui **59 automated tests (PHPUnit)** dengan pass rate 100%. Tunjukkan antusiasme pemrograman Anda ke level serupa!
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0 flex gap-4 bg-slate-950/50 border border-slate-800/80 p-5 rounded-2xl backdrop-blur-md">
+                        <div class="text-center border-r border-slate-800/80 pr-4">
+                            <div class="text-2xl font-extrabold text-brand-400">59</div>
+                            <div class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">PHPUnit Tests</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-extrabold text-cyan-400">100%</div>
+                            <div class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Pass Rate</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission / Form Section -->
+    <section id="contact" class="py-28 relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Kumpulkan Tugas Anda</h2>
+                <p class="text-lg text-slate-400">Pastikan link repositori GitHub Anda bersifat publik dan deploy live dapat diakses dengan baik.</p>
+            </div>
+            
+            <div class="glass-panel glow-border rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden bg-slate-900/40">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full blur-2xl"></div>
+                <form action="#" method="POST" class="space-y-6 relative">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-slate-300 mb-2">Nama Lengkap <span class="text-brand-400">*</span></label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500">
+                                    <i data-lucide="user" class="w-4 h-4"></i>
+                                </span>
+                                <input type="text" id="name" name="name" class="w-full pl-10 pr-4 py-3.5 bg-slate-950/60 border border-slate-800 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all font-medium" placeholder="Masukkan nama lengkap Anda" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-slate-300 mb-2">Email Aktif <span class="text-brand-400">*</span></label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500">
+                                    <i data-lucide="mail" class="w-4 h-4"></i>
+                                </span>
+                                <input type="email" id="email" name="email" class="w-full pl-10 pr-4 py-3.5 bg-slate-950/60 border border-slate-800 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all font-medium" placeholder="email@contoh.com" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="url" class="block text-sm font-semibold text-slate-300 mb-2">Link Deployment (Vercel/Netlify) <span class="text-brand-400">*</span></label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500">
+                                <i data-lucide="globe" class="w-4 h-4"></i>
+                            </span>
+                            <input type="url" id="url" name="url" class="w-full pl-10 pr-4 py-3.5 bg-slate-950/60 border border-slate-800 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all font-medium" placeholder="https://proyek-anda.vercel.app" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="repo" class="block text-sm font-semibold text-slate-300 mb-2">Link Repository (GitHub/GitLab) <span class="text-brand-400">*</span></label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500">
+                                <i data-lucide="git-branch" class="w-4 h-4"></i>
+                            </span>
+                            <input type="url" id="repo" name="repo" class="w-full pl-10 pr-4 py-3.5 bg-slate-950/60 border border-slate-800 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all font-medium" placeholder="https://github.com/username/repo" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full py-4 mt-4 bg-gradient-to-r from-brand-600 to-cyan-500 text-white rounded-xl font-bold text-base hover:opacity-95 transition-all shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+                        <i data-lucide="send" class="w-4 h-4"></i> Kirim Tugas Anda
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-slate-800/80 bg-slate-950/60 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Brand Info -->
+                <div class="md:col-span-2 space-y-4">
+                    <a href="#home" class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-600 to-cyan-400 text-white flex items-center justify-center font-bold text-sm">X</div>
+                        <span class="font-extrabold text-xl tracking-tight text-white">Xolvon</span>
+                    </a>
+                    <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
+                        Program inkubasi pemrograman intensif selama 48 jam untuk mencetak talenta web developer siap industri melalui tantangan riil.
+                    </p>
+                </div>
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Navigasi</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Developer Credit / Showcase -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Pengembang Proyek</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-3">
+                        Halaman pendaftaran dikembangkan dan dioptimalkan oleh:
+                    </p>
+                    <a href="https://www.darellrangga.me" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-white transition-colors group">
+                        <span>Darell Rangga P. R.</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Bottom Copyright & Socials -->
+            <div class="border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row justify-between items-center gap-5">
+                <p class="text-slate-500 text-sm">&copy; 2026 Xolvon Project Incubator. All rights reserved.</p>
+                <div class="flex items-center gap-4">
+                    <!-- GitHub (inline SVG karena Lucide tidak include github icon) -->
+                    <a href="https://github.com/Rangga11268" target="_blank" class="w-9 h-9 rounded-lg bg-slate-800/60 border border-slate-700/60 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700/60 transition-all" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+                        </svg>
+                    </a>
+                    <!-- Portfolio -->
+                    <a href="https://www.darellrangga.me" target="_blank" class="w-9 h-9 rounded-lg bg-slate-800/60 border border-slate-700/60 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700/60 transition-all" aria-label="Portfolio">
+                        <i data-lucide="globe" class="w-4 h-4"></i>
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:darrelrangga@gmail.com" class="w-9 h-9 rounded-lg bg-slate-800/60 border border-slate-700/60 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700/60 transition-all" aria-label="Email">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div> <!-- end wrapper -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
