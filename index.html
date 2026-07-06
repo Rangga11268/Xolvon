@@ -17,12 +17,14 @@
                     },
                     colors: {
                         brand: {
-                            50: '#f5f3ff',
-                            100: '#ede9fe',
-                            200: '#ddd6fe',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
                             dark: '#0B0F19',
                             slateDark: '#0f172a',
                         }
@@ -48,26 +50,24 @@
     <div class="relative min-h-screen flex flex-col overflow-hidden">
 
     <!-- Decorative Ambient Blobs (contained, no extra scroll) -->
-    <div class="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-brand-600/10 blur-[120px] pointer-events-none"></div>
-    <div class="absolute top-[30%] right-[-10%] w-[600px] h-[600px] rounded-full bg-cyan-500/10 blur-[150px] pointer-events-none"></div>
-    <div class="absolute bottom-[-20%] left-[10%] w-[500px] h-[500px] rounded-full bg-indigo-500/10 blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-brand-500/10 blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-[30%] right-[-10%] w-[600px] h-[600px] rounded-full bg-brand-500/10 blur-[150px] pointer-events-none"></div>
+    <div class="absolute bottom-[-20%] left-[10%] w-[500px] h-[500px] rounded-full bg-brand-500/10 blur-[120px] pointer-events-none"></div>
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 transition-all duration-300 glass-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-cyan-400 text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">X</div>
-                    <span class="font-extrabold text-2xl tracking-tight text-white group-hover:text-cyan-400 transition-colors">Xolvon</span>
+                    <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">X</div>
+                    <span class="font-extrabold text-2xl tracking-tight text-white group-hover:text-brand-400 transition-colors">Xolvon</span>
                 </a>
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#home" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</a>
                     <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
                     <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
-                    <a href="#contact" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xs font-semibold text-white rounded-xl group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-800 mt-2">
-                        <span class="relative px-4 py-2 transition-all ease-in duration-75 bg-gray-900 rounded-xl group-hover:bg-opacity-0">
-                            Daftar Sekarang
-                        </span>
+                    <a href="#contact" class="bg-brand-600 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-brand-700 transition-colors">
+                        Daftar Sekarang
                     </a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/50 focus:outline-none" aria-label="Toggle menu">
@@ -81,7 +81,7 @@
                 <a href="#home" class="block px-4 py-2.5 text-slate-300 font-medium rounded-xl hover:bg-slate-800/50 hover:text-white transition-all">Home</a>
                 <a href="#about" class="block px-4 py-2.5 text-slate-300 font-medium rounded-xl hover:bg-slate-800/50 hover:text-white transition-all">About</a>
                 <a href="#contact" class="block px-4 py-2.5 text-slate-300 font-medium rounded-xl hover:bg-slate-800/50 hover:text-white transition-all">Contact</a>
-                <a href="#contact" class="block px-4 py-3 mt-3 text-center bg-gradient-to-r from-brand-600 to-cyan-500 text-white rounded-xl font-bold hover:opacity-90 transition-all">Daftar Sekarang</a>
+                    <a href="#contact" class="block px-4 py-3 mt-3 text-center bg-brand-600 text-white rounded-xl font-bold hover:bg-brand-700 transition-all">Daftar Sekarang</a>
             </div>
         </div>
     </nav>
@@ -92,15 +92,15 @@
         <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
             
             <!-- Glowing Hero Badge -->
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-300 text-xs font-semibold tracking-wide mb-8 animate-pulse shadow-inner">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-300 text-xs font-semibold tracking-wide mb-8">
+                <span class="w-2 h-2 rounded-full bg-brand-400"></span>
                 Pendaftaran Batch 1 Telah Dibuka
             </div>
 
             <!-- Big Main Heading -->
             <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-[1.05]">
                 Pendaftaran Xolvon Project<br>
-                <span class="text-gradient-brand">Incubator Program</span>
+                <span class="text-brand-400">Incubator Program</span>
             </h1>
 
             <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -108,7 +108,7 @@
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-5 w-full sm:w-auto">
-                <a href="#contact" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-cyan-500 text-white font-bold text-base hover:opacity-95 transition-all shadow-lg shadow-brand-500/20 transform hover:-translate-y-0.5 text-center">
+                <a href="#contact" class="px-8 py-4 rounded-xl bg-brand-600 text-white font-bold text-base hover:bg-brand-700 transition-all shadow-lg shadow-brand-500/20 transform hover:-translate-y-0.5 text-center">
                     Kirim Tugas Sekarang
                 </a>
                 <a href="#about" class="px-8 py-4 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-300 font-bold text-base hover:bg-slate-800/80 hover:text-white transition-all transform hover:-translate-y-0.5 text-center backdrop-blur-sm">
@@ -155,7 +155,7 @@
                 <!-- Bento Card 2: Batas Waktu 48 Jam (1 col) -->
                 <div class="glass-card glow-border rounded-3xl p-8 flex flex-col justify-between relative group">
                     <div>
-                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center mb-6">
                             <i data-lucide="clock" class="w-6 h-6"></i>
                         </div>
                         <h3 class="font-display text-xl font-bold text-white mb-3">Batas Waktu Pengumpulan</h3>
@@ -164,7 +164,7 @@
                         </p>
                     </div>
                     <div class="mt-8">
-                        <div class="text-5xl font-extrabold text-amber-400 tracking-tight font-display animate-pulse">48 JAM</div>
+                        <div class="text-5xl font-extrabold text-brand-400 tracking-tight font-display">48 JAM</div>
                         <div class="text-xs text-slate-500 mt-2 font-medium">Sejak pendaftaran dikonfirmasi</div>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                 <!-- Bento Card 3: Cloud Deployment (1 col) -->
                 <div class="glass-card glow-border rounded-3xl p-8 flex flex-col justify-between relative group">
                     <div>
-                        <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center mb-6">
                             <i data-lucide="cloud-lightning" class="w-6 h-6"></i>
                         </div>
                         <h3 class="font-display text-xl font-bold text-white mb-3">Deployment Cloud</h3>
@@ -193,7 +193,7 @@
                 <!-- Bento Card 4: Recommended Tech Stack (2 cols wide) -->
                 <div class="glass-card glow-border rounded-3xl p-8 md:p-10 md:col-span-2 flex flex-col justify-between relative group">
                     <div>
-                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center mb-6">
                             <i data-lucide="layers" class="w-6 h-6"></i>
                         </div>
                         <h3 class="font-display text-2xl font-bold text-white mb-4">Teknologi Rekomendasi</h3>
@@ -203,27 +203,27 @@
                     </div>
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-2">
                         <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
-                            <div class="w-2.5 h-2.5 rounded-full bg-cyan-400"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-brand-400"></div>
                             <span class="text-xs font-semibold text-slate-300">React / Next.js</span>
                         </div>
                         <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
-                            <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-brand-400"></div>
                             <span class="text-xs font-semibold text-slate-300">Vue.js 3</span>
                         </div>
                         <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
-                            <div class="w-2.5 h-2.5 rounded-full bg-indigo-400"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-brand-400"></div>
                             <span class="text-xs font-semibold text-slate-300">Laravel (Inertia)</span>
                         </div>
                         <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
-                            <div class="w-2.5 h-2.5 rounded-full bg-sky-400"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-brand-400"></div>
                             <span class="text-xs font-semibold text-slate-300">Tailwind CSS</span>
                         </div>
                         <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
-                            <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-brand-400"></div>
                             <span class="text-xs font-semibold text-slate-300">RESTful API integration</span>
                         </div>
                         <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
-                            <div class="w-2.5 h-2.5 rounded-full bg-blue-400"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-brand-400"></div>
                             <span class="text-xs font-semibold text-slate-300">Docker (Optional)</span>
                         </div>
                     </div>
@@ -231,9 +231,9 @@
 
                 <!-- Bento Card 5: Case Study / Inspiration (3 cols wide on mobile, full width on desktop) -->
                 <div class="glass-card glow-border rounded-3xl p-8 md:p-10 md:col-span-3 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 overflow-hidden relative group">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500/5 rounded-full blur-3xl pointer-events-none"></div>
                     <div class="max-w-2xl">
-                        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+                        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-400 text-xs font-semibold mb-4">
                             <i data-lucide="award" class="w-3.5 h-3.5"></i>
                             Studi Kasus Proyek Unggulan
                         </div>
@@ -248,7 +248,7 @@
                             <div class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">PHPUnit Tests</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-2xl font-extrabold text-cyan-400">100%</div>
+                            <div class="text-2xl font-extrabold text-brand-400">100%</div>
                             <div class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Pass Rate</div>
                         </div>
                     </div>
@@ -307,7 +307,7 @@
                             <input type="url" id="repo" name="repo" class="w-full pl-10 pr-4 py-3.5 bg-slate-950/60 border border-slate-800 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all font-medium" placeholder="https://github.com/username/repo" required>
                         </div>
                     </div>
-                    <button type="submit" class="w-full py-4 mt-4 bg-gradient-to-r from-brand-600 to-cyan-500 text-white rounded-xl font-bold text-base hover:opacity-95 transition-all shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+                    <button type="submit" class="w-full py-4 mt-4 bg-brand-600 text-white rounded-xl font-bold text-base hover:bg-brand-700 transition-all shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
                         <i data-lucide="send" class="w-4 h-4"></i> Kirim Tugas Anda
                     </button>
                 </form>
@@ -324,7 +324,7 @@
                 <!-- Brand Info -->
                 <div class="md:col-span-2 space-y-4">
                     <a href="#home" class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-600 to-cyan-400 text-white flex items-center justify-center font-bold text-sm">X</div>
+                        <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold text-sm">X</div>
                         <span class="font-extrabold text-xl tracking-tight text-white">Xolvon</span>
                     </a>
                     <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
@@ -346,7 +346,7 @@
                     <p class="text-sm text-slate-400 leading-relaxed mb-3">
                         Halaman pendaftaran dikembangkan dan dioptimalkan oleh:
                     </p>
-                    <a href="https://www.darellrangga.me" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-white transition-colors group">
+                    <a href="https://www.darellrangga.me" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-400 hover:text-white transition-colors group">
                         <span>Darell Rangga P. R.</span>
                         <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
                     </a>
