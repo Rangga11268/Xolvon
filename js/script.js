@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // === Countdown Timer (fixed deadline — ganti tanggal di sini) ===
     var countdownEl = document.getElementById('countdown');
     if (countdownEl) {
-        var endTime = new Date('2026-07-20T23:59:59');
+        var endTime = new Date(Date.now() + (48 * 60 * 60 * 1000) - (5 * 60 * 1000));
 
         function updateCountdown() {
             var now = new Date();
