@@ -55,40 +55,45 @@
     <div class="absolute bottom-[-20%] left-[10%] w-[500px] h-[500px] rounded-full bg-brand-500/10 blur-[120px] pointer-events-none"></div>
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 transition-all duration-300 glass-nav">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">X</div>
-                    <span class="font-extrabold text-2xl tracking-tight text-white group-hover:text-brand-400 transition-colors">Xolvon</span>
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl transition-all duration-300">
+        <div class="glass-nav rounded-2xl border border-slate-800/60 shadow-xl shadow-brand-500/5">
+            <div class="flex justify-between items-center h-16 px-5">
+                <a href="#home" class="flex items-center gap-2.5 group">
+                    <div class="w-9 h-9 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold text-base shadow-lg shadow-brand-500/30 group-hover:shadow-brand-500/50 group-hover:scale-110 transition-all duration-300">X</div>
+                    <span class="font-bold text-xl tracking-tight text-white group-hover:text-brand-400 transition-colors">Xolvon</span>
                 </a>
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="#home" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</a>
-                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
-                    <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
-                    <a href="#contact" class="bg-brand-600 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-brand-700 transition-colors">
-                        Daftar Sekarang
+                <div class="hidden md:flex items-center gap-1.5">
+                    <a href="#home" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Home</a>
+                    <a href="#about" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">About</a>
+                    <a href="#contact" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Contact</a>
+                    <div class="w-px h-6 bg-slate-800 mx-2"></div>
+                    <a href="#contact" class="bg-brand-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-brand-700 transition-all shadow-lg shadow-brand-500/20 flex items-center gap-2">
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i> Daftar
                     </a>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/50 focus:outline-none" aria-label="Toggle menu">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/50 focus:outline-none transition-all" aria-label="Toggle menu">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
                 </button>
             </div>
         </div>
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-950/95 border-b border-slate-800/80 backdrop-blur-lg">
-            <div class="px-4 py-5 space-y-2">
+        <div id="mobile-menu" class="hidden mt-2 glass-nav rounded-2xl border border-slate-800/60 shadow-xl overflow-hidden">
+            <div class="px-4 py-4 space-y-1">
                 <a href="#home" class="block px-4 py-2.5 text-slate-300 font-medium rounded-xl hover:bg-slate-800/50 hover:text-white transition-all">Home</a>
                 <a href="#about" class="block px-4 py-2.5 text-slate-300 font-medium rounded-xl hover:bg-slate-800/50 hover:text-white transition-all">About</a>
                 <a href="#contact" class="block px-4 py-2.5 text-slate-300 font-medium rounded-xl hover:bg-slate-800/50 hover:text-white transition-all">Contact</a>
-                    <a href="#contact" class="block px-4 py-3 mt-3 text-center bg-brand-600 text-white rounded-xl font-bold hover:bg-brand-700 transition-all">Daftar Sekarang</a>
+                <div class="border-t border-slate-800/60 pt-2 mt-2">
+                    <a href="#contact" class="flex items-center justify-center gap-2 px-4 py-3 bg-brand-600 text-white rounded-xl font-semibold hover:bg-brand-700 transition-all">
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i> Daftar Sekarang
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
     <main class="flex-1">
     <!-- Hero -->
-    <section id="home" class="relative pt-40 pb-28 md:pt-48 md:pb-36 px-4 sm:px-6 lg:px-8">
+    <section id="home" class="relative pt-28 pb-28 md:pt-36 md:pb-36 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
             
             <!-- Glowing Hero Badge -->
